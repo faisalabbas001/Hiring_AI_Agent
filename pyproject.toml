@@ -4,13 +4,20 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "Muhammad Uzair", email = "uzairyasin83@gmail.com" }
+    { name = "Faisal Abbas", email = "faisalabbas7959@gmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
     "crewai>=0.100.1",
     "crewai-tools>=0.33.0",
+    "fitz>=0.0.1.dev2",
+    "frontend>=0.0.3",
+    "google-api-python-client>=2.161.0",
+    "google-auth-oauthlib>=1.2.1",
     "langchain>=0.3.17",
+    "linkedin-job-search>=0.1.0",
+    "pypdf2>=3.0.1",
+    "tools>=0.1.9",
 ]
 
 [project.scripts]
