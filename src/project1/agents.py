@@ -11,6 +11,7 @@ import json
 from google.oauth2.credentials import Credentials
 import base64
 import re
+from dotenv import load_dotenv
 
 
 load_dotenv()
@@ -18,7 +19,7 @@ load_dotenv()
 class HiringAgent:
     def __init__(self, user_email):
         self.OpenAIGPT35 = LLM(
-            model="gemini/gemini-2.0-flash-exp", temperature=0.7, api_key="AIzaSyDqQsJMgF9WA9Z5Fz-qDpLZH9xeNNV2SqM"
+            model="gemini/gemini-2.0-flash-exp", temperature=0.7, api_key=os.getenv("api_key")
         )
         self.user_email = user_email
         self.zoom_tools = ZoomTools() 
