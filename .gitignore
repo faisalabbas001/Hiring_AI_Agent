@@ -11,4 +11,4 @@ wheels/
 # Ignore environment variables and credentials
 src/project1/.env
 src/project1/service.json
-
+echo -e "\n# Ignore secrets\nsrc/project1/.env\nsrc/project1/service.json" >> .gitignore
