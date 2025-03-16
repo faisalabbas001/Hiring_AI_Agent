@@ -107,7 +107,7 @@ class   ZoomTools:
             self.send_email(candidate_email, subject, body)
             msg = MIMEText(body)
             msg['Subject'] = 'Your Application Status'
-            msg['From'] = 'rai.faisalpasha2003@gmail.com'  
+            msg['From'] = os.getenv("Gmail_set")  
             msg['To'] = candidate_email
 
             print(f"📧 Attempting to send email to: {candidate_email}")
@@ -116,7 +116,7 @@ class   ZoomTools:
                 try:
                     with   smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:  
                         
-                        server.login('rai.faisalpasha2003@gmail.com', 'bwvvnsoayfpqhnrr')  
+                        server.login(os.getenv("Gmail_set"),os.getenv("Gmail_Password"))  
                         server.send_message(msg)
                     print(f"✅ Email sent to {candidate_email}")
                     return 

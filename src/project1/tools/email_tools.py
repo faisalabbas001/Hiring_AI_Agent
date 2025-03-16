@@ -261,14 +261,14 @@ class EmailTools:
     def send_email(self, to_email, message):
         msg = MIMEText(message)
         msg['Subject'] = 'Your Application Status'
-        msg['From'] = 'rai.faisalpasha2003@gmail.com' 
+        msg['From'] = os.getenv("Gmail_set")  
         msg['To'] = to_email
 
         for attempt in range(3): 
             try:
                 with   smtplib.SMTP_SSL('smtp.gmail.com', 465) as server: 
                     
-                    server.login('rai.faisalpasha2003@gmail.com', 'bwvvnsoayfpqhnrr')  
+                    server.login(os.getenv("Gmail_set") ,os.getenv("Gmail_Password"))  
                     server.send_message(msg)
                 print(f"✅ Email sent to {to_email}")
                 return  
