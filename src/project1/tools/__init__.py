@@ -1,7 +1,7 @@
-# Inside project1/__main__.py  
+# # Inside project1/__main__.py  
 
-def main():  
-    print("Hello from project1!")  
+# def main():  
+#     print("Hello from project1!")  
 
-if __name__ == "__main__":  
-    main()  
+# if __name__ == "__main__":  
+#     main()  
