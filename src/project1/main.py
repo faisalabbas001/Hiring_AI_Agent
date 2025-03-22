@@ -77,7 +77,7 @@ def read_root():
 
 if __name__ == "__main__":
         port = int(os.environ.get("PORT", 8000))  # Use Railway-assigned PORT
-        uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
+        uvicorn.run("main:app", host="0.0.0.0", port=port)
 @app.post("/start")
 def start_agent():
     """Start the hiring agent process."""
@@ -100,7 +100,7 @@ def main():
     """Main function to start FastAPI on a specific port."""
     print("## Hiring Crew Agent API is starting on port 8001...")
     port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("src.project1.main:app", host="0.0.0.0", port=port, reload=True)
+    uvicorn.run("src.project1.main:app", host="0.0.0.0", port=port)
 
 if __name__ == "__main__":
     main()
